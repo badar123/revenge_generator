@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<story title="Story Template">
+    <player>
+        <states>
+            <state>szuicid</state>
+        </states>
+        <items>
+            <item>egy szál cigi</item>
+        </items>
+        <health>20</health>
+    </player>
+    <scene name="Bejárat" img="cickany.png" current_situation="init">
+      <situation name="init">
+          <description>Első leírás a scene-hez: Itt egy cickány.</description>
+          <options>
+              <option to_situation="megölt">megölöm</option>
+              <option result="Nem történt semmi. Próbáld meg megölni!">kinyírom</option>
+          </options>
+      </situation>
+      <situation name="megölt" img="cickany_halott.png" item_gained="alma">
+          <description>Megölted a cickányt! Kaptál egy almát.</description>
+          <options>
+              <option to_situation="done">Elhúzol a picsába.</option>
+          </options>
+      </situation>
+      <situation name="done">
+          <description>Első résznél állsz megint, de má végezté.</description>
+          <options>
+              <option result="lófasz">Itt már nincs mit tenni.</option>
+          </options>
+      </situation>
+    </scene>
+</story>
